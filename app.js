@@ -70,10 +70,6 @@ async function recipeInstr(id) {
     const measure = Object.keys(recipe).filter((item) =>
       item.includes("Measure"),
     );
-    console.log(measure);
-    ingredient.forEach((item) => {
-      console.log(recipe[item]);
-    });
     instruction.classList.remove("hidden");
     showInstruction(recipe, ingredient, measure);
   } catch (error) {
