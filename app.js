@@ -51,9 +51,9 @@ async function getRecipes(name) {
 
     return response;
   } catch (error) {
-    recipesContainer.innerHTML = `<p>Error: Can't get recipe.${error}</p>`;
+    recipesContainer.textContent = `<p>Error: Can't get recipe.</p>`;
     status.textContent = "";
-    console.error(error);
+    //console.error(error);
   }
 }
 
@@ -223,6 +223,7 @@ function renderRecipes(recipesInfo) {
     btn2.setAttribute("id", recipeInfo.idMeal);
     btn2.onclick = function () {
       recipeInstr(btn2.id);
+      instruction.textContent = "";
     };
 
     recipesContainer.appendChild(divHtml);
